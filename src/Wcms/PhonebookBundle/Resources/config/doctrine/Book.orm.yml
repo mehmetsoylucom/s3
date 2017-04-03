@@ -1,0 +1,18 @@
+Wcms\PhonebookBundle\Entity\Book:
+    type: entity
+    table: null
+    repositoryClass: Wcms\PhonebookBundle\Repository\BookRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        phone:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

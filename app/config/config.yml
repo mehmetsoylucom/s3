@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@WcmsPhonebookBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -68,3 +69,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+snc_redis:
+    clients:
+        default:
+            type: phpredis
+            alias: default
+            dsn: redis://localhost/1
+            logging: %kernel.debug%
+        cache:
+            type: phpredis
+            alias: cache
+            dsn: redis://localhost/2
+            logging: %kernel.debug%

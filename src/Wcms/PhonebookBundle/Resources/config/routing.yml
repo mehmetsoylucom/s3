@@ -1,0 +1,7 @@
+wcms_phonebook_book:
+    resource: "@WcmsPhonebookBundle/Resources/config/routing/book.yml"
+    prefix:   /book
+
+wcms_phonebook_homepage:
+    path:     /
+    defaults: { _controller: WcmsPhonebookBundle:Default:index }
