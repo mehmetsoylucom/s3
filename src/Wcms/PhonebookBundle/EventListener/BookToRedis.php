@@ -44,7 +44,9 @@ class BookToRedis
             return;
         }
 
-        $this->redis->sRem('students', $eventArgs->getOldValue('name'));
+        if ($eventArgs->hasChangedField('name')) {
+            $this->redis->sRem('students', $eventArgs->getOldValue('name'));
+        }
     }
 
     /**
