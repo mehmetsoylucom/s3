@@ -1,4 +1,7 @@
-root
+Symfony 3 Samples
 ====
 
-A Symfony project created on April 2, 2017, 2:32 pm.
+## PhonebookBundle
+- Snc Redis implementation
+- Doctrine event listener and redis relations
+
